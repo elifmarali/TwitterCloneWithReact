@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply bg-black text-white
+}
+
+.sideBarMenuItem{
+    font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    white-space: nowrap;
+    line-height: 24px;
+    margin-left: 20px;
+    margin-right: 16px;
+}
+
+/*
+sol sidebar : 275px
+sağ iki kısım : 1050px
+aradaki gap : 100px
+orta :600px / auto 
+sağ sidebar : 350px
+toplam alan : 1325px
+*/
