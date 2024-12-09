@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function More() {
   return (
-    <Popover className="relative ">
-      <PopoverButton className="block group outline-none e-r">
+    <Popover className="relative">
+      <PopoverButton className="block group outline-none">
         <div
           className={
             "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition"
@@ -21,11 +21,11 @@ function More() {
           <span className="sideBarMenuItem">Daha Fazla</span>
         </div>
       </PopoverButton>
-      <PopoverPanel className="w-[318px] absolute bottom-0 left-0 bg-black shadow-lg shadow-box rounded-xl">
+			<PopoverPanel className="w-[262px] absolute bottom-0 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden bg-black">
         <Link
           to="/account_analytics"
           className={
-            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition"
+            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition bg-black overflow-hidden"
           }
         >
           <div className="w-[30px] h-[30px] relative">
@@ -41,7 +41,7 @@ function More() {
         <Link
           to="/monetization"
           className={
-            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition"
+            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition bg-black overflow-hidden"
           }
         >
           <div className="w-[30px] h-[30px] relative">
@@ -57,7 +57,7 @@ function More() {
         <Link
           to="/settings"
           className={
-            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition"
+            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition bg-black overflow-hidden"
           }
         >
           <div className="w-[30px] h-[30px] relative">
