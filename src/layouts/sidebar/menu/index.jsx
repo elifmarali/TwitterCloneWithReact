@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import classNames from "classnames";
-import mainMenu from "~/utils/consts";
+import {mainMenu} from "~/utils/consts";
 import More from "./more";
 
 function Menu() {
@@ -9,7 +9,11 @@ function Menu() {
       {mainMenu.map((menuItem) => {
         return (
           <NavLink
-            to={menuItem.path}
+            to={
+              typeof menuItem.path === "function"
+                ? menuItem.path()
+                : menuItem.path
+            }
             key={menuItem.path}
             className="block group"
           >

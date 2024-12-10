@@ -1,8 +1,6 @@
-import { useSelector } from "react-redux";
 import store from "~/store";
 
-const profileUsername =  store.getState().auth?.currentAccount?.username
-const mainMenu = [
+export const mainMenu = [
   {
     path: "/",
     title: "Anasayfa",
@@ -137,7 +135,7 @@ const mainMenu = [
     },
   },
   {
-    path: `/${profileUsername}`,
+    path: `/${store.getState().auth?.currentAccount?.username}`,
     title: "Profil",
     icons: {
       active: (
@@ -160,4 +158,97 @@ const mainMenu = [
   },
 ];
 
-export default mainMenu;
+export const topics = [
+  {
+    title: "#Sednaya",
+    topic: {
+      type: "tag",
+      value: "Siyaset · Gündemdekiler",
+    },
+    postCount: "44,8 B",
+  },
+  {
+    title: "#SVSvGS",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+    postCount: "2.980",
+  },
+  {
+    title: "Dilan Polat",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+  },
+  {
+    title: "#Sednaya",
+    topic: {
+      type: "tag",
+      value: "Siyaset · Gündemdekiler",
+    },
+    postCount: "44,8 B",
+  },
+  {
+    title: "#SVSvGS",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+    postCount: "2.980",
+  },
+  {
+    title: "Dilan Polat",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+  },
+  {
+    title: "#Sednaya",
+    topic: {
+      type: "tag",
+      value: "Siyaset · Gündemdekiler",
+    },
+    postCount: "44,8 B",
+  },
+  {
+    title: "#SVSvGS",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+    postCount: "2.980",
+  },
+  {
+    title: "Dilan Polat",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+  },
+  {
+    title: "#Sednaya",
+    topic: {
+      type: "tag",
+      value: "Siyaset · Gündemdekiler",
+    },
+    postCount: "44,8 B",
+  },
+  {
+    title: "#SVSvGS",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+    postCount: "2.980",
+  },
+  {
+    title: "Dilan Polat",
+    topic: {
+      type: "tag",
+      value: "Türkiye tarihinde gündemde",
+    },
+  },
+];
