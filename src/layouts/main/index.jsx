@@ -1,8 +1,15 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../sidebar'
 import Rightbar from '../rightbar'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { getUserList } from '~/store/userList'
 
 function MainLayout() {
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getUserList())
+  },[])
   return (
     <div className='w-[1265px] mx-auto flex'>
       <Sidebar />

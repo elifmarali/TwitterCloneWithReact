@@ -15,7 +15,7 @@ function Search() {
     }
   }, [query]);
   return (
-    <div className="mb-3" ref={ref}>
+    <div className="mb-3 sticky top-0" ref={ref}>
       <div className="relative w-[348.4px] h-[42.4px] bg-[#202327] rounded-full flex items-center focus-within:border focus-within:border-[#1d9bf0] group pr-2 py-1">
         <div className="w-[50px] h-[42px] flex items-center">
           <svg

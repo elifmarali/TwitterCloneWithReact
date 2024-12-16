@@ -2,6 +2,8 @@ import React from "react";
 import Search from "./search";
 import Premium from "./premium";
 import Topics from "./topics";
+import WhoFollow from "./whoFollow";
+import Footer from "../sidebar/footer";
 
 function Rightbar() {
   return (
@@ -9,6 +11,8 @@ function Rightbar() {
       <Search />
       <Premium />
       <Topics />
+      <WhoFollow />
+      <Footer />
     </aside>
   );
 }

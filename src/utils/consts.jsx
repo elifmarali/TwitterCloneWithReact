@@ -47,6 +47,7 @@ export const mainMenu = [
     },
   },
   {
+    notification: 32,
     path: "/notifications",
     title: "Bildirimler",
     icons: {
@@ -69,6 +70,7 @@ export const mainMenu = [
     },
   },
   {
+    notification: 9,
     path: "/messages",
     title: "Mesajlar",
     icons: {
@@ -165,7 +167,7 @@ export const topics = [
       type: "tag",
       value: "Siyaset · Gündemdekiler",
     },
-    postCount: "44,8 B",
+    postCount: 44888,
   },
   {
     title: "#SVSvGS",
@@ -173,7 +175,7 @@ export const topics = [
       type: "tag",
       value: "Türkiye tarihinde gündemde",
     },
-    postCount: "2.980",
+    postCount: 2980,
   },
   {
     title: "Dilan Polat",
@@ -188,7 +190,7 @@ export const topics = [
       type: "tag",
       value: "Siyaset · Gündemdekiler",
     },
-    postCount: "44,8 B",
+    postCount: 44888,
   },
   {
     title: "#SVSvGS",
@@ -196,7 +198,7 @@ export const topics = [
       type: "tag",
       value: "Türkiye tarihinde gündemde",
     },
-    postCount: "2.980",
+    postCount: 2980,
   },
   {
     title: "Dilan Polat",
@@ -211,7 +213,7 @@ export const topics = [
       type: "tag",
       value: "Siyaset · Gündemdekiler",
     },
-    postCount: "44,8 B",
+    postCount: 44888,
   },
   {
     title: "#SVSvGS",
@@ -219,7 +221,7 @@ export const topics = [
       type: "tag",
       value: "Türkiye tarihinde gündemde",
     },
-    postCount: "2.980",
+    postCount: 2980,
   },
   {
     title: "Dilan Polat",
@@ -234,7 +236,7 @@ export const topics = [
       type: "tag",
       value: "Siyaset · Gündemdekiler",
     },
-    postCount: "44,8 B",
+    postCount: 44888,
   },
   {
     title: "#SVSvGS",
@@ -242,7 +244,7 @@ export const topics = [
       type: "tag",
       value: "Türkiye tarihinde gündemde",
     },
-    postCount: "2.980",
+    postCount: 2980,
   },
   {
     title: "Dilan Polat",
@@ -252,3 +254,6 @@ export const topics = [
     },
   },
 ];
+
+
+

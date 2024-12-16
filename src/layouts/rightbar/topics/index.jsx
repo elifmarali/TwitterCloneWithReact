@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { topics } from "~/utils/consts";
 import TopicItem from "./topicItem";
+import RigthbarSection from "~/components/RigthbarSection";
 
 function Topics() {
+  // Listenin genişletilip genişletilmediği bilgisini tutar
   const [isExpanded, setIsExpanded] = useState(false);
+  // İçeriğin taşma yapıp yapmadığı durumu kontrol eder
   const [isOverflow, setIsOverflow] = useState(false);
   const contentRef = useRef(null);
 
@@ -15,27 +18,13 @@ function Topics() {
   }, [topics]);
 
   return (
-    <div className="antialiased border border-[#2f3336] py-3 px-4 flex flex-col gap-2.5 rounded-lg mb-4">
-      <p className="text-xl font-bold">Neler oluyor?</p>
-      <div
-        ref={contentRef}
-        className={`${
-          isExpanded ? "max-h-none overflow-y-auto" : "max-h-[430.5px] overflow-hidden"
-        }`}
-      >
-        {topics.map((topicItem, index) => (
-          <TopicItem topic={topicItem} key={index} />
-        ))}
-      </div>
-      {isOverflow && (
-        <div
-          className="text-[#1d9bf0] cursor-pointer mt-2"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded ? "Daha az göster" : "Daha fazla göster"}
+    <RigthbarSection title="Neler oluyor?" isOverflow={isOverflow} isExpanded={isExpanded} setIsExpanded={setIsExpanded} ref={contentRef}>
+      {topics?.map((topicItem, index) => (
+        <div className="hover:bg-[rgba(255,255,255,0.03)]" key={index}>
+          <TopicItem topic={topicItem}  />
         </div>
-      )}
-    </div>
+      ))}
+    </RigthbarSection>
   );
 }
 
