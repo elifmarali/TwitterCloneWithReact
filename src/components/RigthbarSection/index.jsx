@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-function RigthbarSection({title,children,isOverflow,isExpanded,setIsExpanded,ref}) {
+const RigthbarSection =forwardRef(({title,children,isOverflow,isExpanded,setIsExpanded},ref) => {
   return (
     <div className="antialiased border border-[#2f3336] flex flex-col gap-2.5 rounded-lg mb-4">
     <p className="text-xl font-bold py-3 px-4">{title}</p>
@@ -14,7 +14,7 @@ function RigthbarSection({title,children,isOverflow,isExpanded,setIsExpanded,ref
     >
       {children}
     </div>
-    {!isOverflow && (
+    {isOverflow && (
       <div
         className="text-[#1d9bf0] cursor-pointer px-3 py-3 text-[#1d9bf0] hover:bg-[rgba(255,255,255,0.03)]"
         onClick={() => setIsExpanded(!isExpanded)}
@@ -24,6 +24,6 @@ function RigthbarSection({title,children,isOverflow,isExpanded,setIsExpanded,ref
     )}
   </div>
   )
-}
+})
 
 export default RigthbarSection

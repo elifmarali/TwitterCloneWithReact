@@ -1,230 +1,230 @@
 {
-    "followUsers" : [
-        {
-          "id": 1,
-          "name": "Sazai Karakoç",
-          "isApproved": true,
-          "username": "sezai456789",
-          "description": "Çölden geçmek Leylâ'ya ermek içindir...",
-          "followedCounter": 8,
-          "followingCounter": 221964,
-          "image": "https://i.pravatar.cc/150?u=sezai456789",
-          "followed":false
-        },
-        {
-          "id": 2,
-          "name": "Ahmet Hamdi Tanpınar",
-          "isApproved": true,
-          "username": "tanpinar1901",
-          "description": "Ne içindeyim zamanın ne de büsbütün dışında...",
-          "followedCounter": 56,
-          "followingCounter": 12045,
-          "image": "https://i.pravatar.cc/150?u=tanpinar1901",
-          "followed":false
-        },
-        {
-          "id": 3,
-          "name": "Nazım Hikmet",
-          "isApproved": true,
-          "username": "nazimhikmetran",
-          "description": "Yaşamak bir ağaç gibi tek ve hür...",
-          "followedCounter": 198,
-          "followingCounter": 87456,
-          "image": "https://i.pravatar.cc/150?u=nazimhikmetran",
-          "followed":false
-        },
-        {
-          "id": 4,
-          "name": "Orhan Pamuk",
-          "isApproved": true,
-          "username": "orhanpamuk",
-          "description": "Benim adım Kırmızı...",
-          "followedCounter": 25,
-          "followingCounter": 45687,
-          "image": "https://i.pravatar.cc/150?u=orhanpamuk",
-          "followed":false
-        },
-        {
-          "id": 5,
-          "name": "Yunus Emre",
-          "isApproved": true,
-          "username": "yunus_emre",
-          "description": "Bölüşürsek tok oluruz, bölünürsek yok oluruz...",
-          "followedCounter": 302,
-          "followingCounter": 15023,
-          "image": "https://i.pravatar.cc/150?u=yunus_emre",
-          "followed":false
-        },
-        {
-          "id": 6,
-          "name": "Mevlana Celaleddin-i Rumi",
-          "isApproved": true,
-          "username": "mevlana_rumi",
-          "description": "Ne olursan ol yine gel...",
-          "followedCounter": 458,
-          "followingCounter": 95685,
-          "image": "https://i.pravatar.cc/150?u=mevlana_rumi",
-          "followed":false
-        },
-        {
-          "id": 7,
-          "name": "Sabahattin Ali",
-          "isApproved": true,
-          "username": "sabahattinali",
-          "description": "Başın öne eğilmesin...",
-          "followedCounter": 78,
-          "followingCounter": 23890,
-          "image": "https://i.pravatar.cc/150?u=sabahattinali",
-          "followed":false
-        },
-        {
-          "id": 8,
-          "name": "Cahit Zarifoğlu",
-          "isApproved": false,
-          "username": "zarifoglu_cahit",
-          "description": "Yaşamak bir şarkı gibi...",
-          "followedCounter": 14,
-          "followingCounter": 8421,
-          "image": "https://i.pravatar.cc/150?u=zarifoglu_cahit",
-          "followed":false
-        },
-        {
-          "id": 9,
-          "name": "Attila İlhan",
-          "isApproved": true,
-          "username": "attila_ilhan",
-          "description": "Ben sana mecburum...",
-          "followedCounter": 89,
-          "followingCounter": 19856,
-          "image": "https://i.pravatar.cc/150?u=attila_ilhan",
-          "followed":false
-        },
-        {
-          "id": 10,
-          "name": "Özdemir Asaf",
-          "isApproved": false,
-          "username": "ozdemirasaf",
-          "description": "Bir insanı sevmekle başlayacak her şey...",
-          "followedCounter": 32,
-          "followingCounter": 14587,
-          "image": "https://i.pravatar.cc/150?u=ozdemirasaf",
-          "followed":false
-        },
-        {
-          "id": 11,
-          "name": "Edip Cansever",
-          "isApproved": true,
-          "username": "edipcansever",
-          "followedCounter": 61,
-          "followingCounter": 10874,
-          "image": "https://i.pravatar.cc/150?u=edipcansever",
-          "followed":false
-        },
-        {
-          "id": 12,
-          "name": "Fazıl Hüsnü Dağlarca",
-          "isApproved": false,
-          "username": "fazil_daglarca",
-          "followedCounter": 45,
-          "followingCounter": 20456,
-          "image": "https://i.pravatar.cc/150?u=fazil_daglarca",
-          "followed":false
-        },
-        {
-          "id": 13,
-          "name": "Oğuz Atay",
-          "isApproved": true,
-          "username": "oguzatay",
-          "description": "Tutunamayanlar...",
-          "followedCounter": 124,
-          "followingCounter": 58746,
-          "image": "https://i.pravatar.cc/150?u=oguzatay",
-          "followed":false
-        },
-        {
-          "id": 14,
-          "name": "Turgut Uyar",
-          "isApproved": true,
-          "username": "turgutuyar",
-          "description": "Göğe bakalım...",
-          "followedCounter": 98,
-          "followingCounter": 30214,
-          "image": "https://i.pravatar.cc/150?u=turgutuyar",
-          "followed":false
-        },
-        {
-          "id": 15,
-          "name": "Behçet Necatigil",
-          "isApproved": false,
-          "username": "necatigil",
-          "followedCounter": 29,
-          "followingCounter": 12345,
-          "image": "https://i.pravatar.cc/150?u=necatigil",
-          "followed":false
-        },
-        {
-          "id": 16,
-          "name": "Ece Ayhan",
-          "isApproved": true,
-          "username": "ece_ayhan",
-          "followedCounter": 42,
-          "followingCounter": 14758,
-          "image": "https://i.pravatar.cc/150?u=ece_ayhan",
-          "followed":false
-        },
-        {
-          "id": 17,
-          "name": "Ahmet Arif",
-          "isApproved": true,
-          "username": "ahmetarif",
-          "description": "Hasretinden prangalar eskittim...",
-          "followedCounter": 65,
-          "followingCounter": 17890,
-          "image": "https://i.pravatar.cc/150?u=ahmetarif",
-          "followed":false
-        },
-        {
-          "id": 18,
-          "name": "İlhan Berk",
-          "isApproved": false,
-          "username": "ilhanberk",
-          "description": "Galata'dan...",
-          "followedCounter": 21,
-          "followingCounter": 10456,
-          "image": "https://i.pravatar.cc/150?u=ilhanberk",
-          "followed":false
-        },
-        {
-          "id": 19,
-          "name": "Cemal Süreya",
-          "isApproved": true,
-          "username": "cemalsureya",
-          "description": "Hayat kısa, kuşlar uçuyor...",
-          "followedCounter": 84,
-          "followingCounter": 20874,
-          "image": "https://i.pravatar.cc/150?u=cemalsureya",
-          "followed":false
-        },
-        {
-          "id": 20,
-          "name": "Sait Faik Abasıyanık",
-          "isApproved": true,
-          "username": "saitfaik",
-          "followedCounter": 95,
-          "followingCounter": 18765,
-          "image": "https://i.pravatar.cc/150?u=saitfaik",
-          "followed":false
-        },
-        {
-          "id": 21,
-          "name": "Aziz Nesin",
-          "isApproved": false,
-          "username": "aziznesin",
-          "description": "Zübük...",
-          "followedCounter": 37,
-          "followingCounter": 16532,
-          "image": "https://i.pravatar.cc/150?u=aziznesin",
-          "followed":false
-        }
-      ]
+  "followUsers": [
+    {
+      "id": "1",
+      "name": "Sazai Karakoç",
+      "isApproved": true,
+      "username": "sezai456789",
+      "description": "Çölden geçmek Leylâ'ya ermek içindir...",
+      "followedCounter": 8,
+      "followingCounter": 221964,
+      "image": "https://i.pravatar.cc/150?u=sezai456789",
+      "followed": false
+    },
+    {
+      "id": "2",
+      "name": "Ahmet Hamdi Tanpınar",
+      "isApproved": true,
+      "username": "tanpinar1901",
+      "description": "Ne içindeyim zamanın ne de büsbütün dışında...",
+      "followedCounter": 56,
+      "followingCounter": 12045,
+      "image": "https://i.pravatar.cc/150?u=tanpinar1901",
+      "followed": false
+    },
+    {
+      "id": "3",
+      "name": "Nazım Hikmet",
+      "isApproved": true,
+      "username": "nazimhikmetran",
+      "description": "Yaşamak bir ağaç gibi tek ve hür...",
+      "followedCounter": 198,
+      "followingCounter": 87456,
+      "image": "https://i.pravatar.cc/150?u=nazimhikmetran",
+      "followed": false
+    },
+    {
+      "id": "4",
+      "name": "Orhan Pamuk",
+      "isApproved": true,
+      "username": "orhanpamuk",
+      "description": "Benim adım Kırmızı...",
+      "followedCounter": 25,
+      "followingCounter": 45687,
+      "image": "https://i.pravatar.cc/150?u=orhanpamuk",
+      "followed": true
+    },
+    {
+      "id": "5",
+      "name": "Yunus Emre",
+      "isApproved": true,
+      "username": "yunus_emre",
+      "description": "Bölüşürsek tok oluruz, bölünürsek yok oluruz...",
+      "followedCounter": 302,
+      "followingCounter": 15023,
+      "image": "https://i.pravatar.cc/150?u=yunus_emre",
+      "followed": true
+    },
+    {
+      "id": "6",
+      "name": "Mevlana Celaleddin-i Rumi",
+      "isApproved": true,
+      "username": "mevlana_rumi",
+      "description": "Ne olursan ol yine gel...",
+      "followedCounter": 458,
+      "followingCounter": 95685,
+      "image": "https://i.pravatar.cc/150?u=mevlana_rumi",
+      "followed": true
+    },
+    {
+      "id": "7",
+      "name": "Sabahattin Ali",
+      "isApproved": true,
+      "username": "sabahattinali",
+      "description": "Başın öne eğilmesin...",
+      "followedCounter": 78,
+      "followingCounter": 23890,
+      "image": "https://i.pravatar.cc/150?u=sabahattinali",
+      "followed": false
+    },
+    {
+      "id": "8",
+      "name": "Cahit Zarifoğlu",
+      "isApproved": false,
+      "username": "zarifoglu_cahit",
+      "description": "Yaşamak bir şarkı gibi...",
+      "followedCounter": 14,
+      "followingCounter": 8421,
+      "image": "https://i.pravatar.cc/150?u=zarifoglu_cahit",
+      "followed": false
+    },
+    {
+      "id": "9",
+      "name": "Attila İlhan",
+      "isApproved": true,
+      "username": "attila_ilhan",
+      "description": "Ben sana mecburum...",
+      "followedCounter": 89,
+      "followingCounter": 19856,
+      "image": "https://i.pravatar.cc/150?u=attila_ilhan",
+      "followed": false
+    },
+    {
+      "id": "10",
+      "name": "Özdemir Asaf",
+      "isApproved": false,
+      "username": "ozdemirasaf",
+      "description": "Bir insanı sevmekle başlayacak her şey...",
+      "followedCounter": 32,
+      "followingCounter": 14587,
+      "image": "https://i.pravatar.cc/150?u=ozdemirasaf",
+      "followed": false
+    },
+    {
+      "id": "11",
+      "name": "Edip Cansever",
+      "isApproved": true,
+      "username": "edipcansever",
+      "followedCounter": 61,
+      "followingCounter": 10874,
+      "image": "https://i.pravatar.cc/150?u=edipcansever",
+      "followed": false
+    },
+    {
+      "id": "12",
+      "name": "Fazıl Hüsnü Dağlarca",
+      "isApproved": false,
+      "username": "fazil_daglarca",
+      "followedCounter": 45,
+      "followingCounter": 20456,
+      "image": "https://i.pravatar.cc/150?u=fazil_daglarca",
+      "followed": false
+    },
+    {
+      "id": "13",
+      "name": "Oğuz Atay",
+      "isApproved": true,
+      "username": "oguzatay",
+      "description": "Tutunamayanlar...",
+      "followedCounter": 124,
+      "followingCounter": 58746,
+      "image": "https://i.pravatar.cc/150?u=oguzatay",
+      "followed": false
+    },
+    {
+      "id": "14",
+      "name": "Turgut Uyar",
+      "isApproved": true,
+      "username": "turgutuyar",
+      "description": "Göğe bakalım...",
+      "followedCounter": 98,
+      "followingCounter": 30214,
+      "image": "https://i.pravatar.cc/150?u=turgutuyar",
+      "followed": false
+    },
+    {
+      "id": "15",
+      "name": "Behçet Necatigil",
+      "isApproved": false,
+      "username": "necatigil",
+      "followedCounter": 29,
+      "followingCounter": 12345,
+      "image": "https://i.pravatar.cc/150?u=necatigil",
+      "followed": false
+    },
+    {
+      "id": "16",
+      "name": "Ece Ayhan",
+      "isApproved": true,
+      "username": "ece_ayhan",
+      "followedCounter": 42,
+      "followingCounter": 14758,
+      "image": "https://i.pravatar.cc/150?u=ece_ayhan",
+      "followed": false
+    },
+    {
+      "id": "17",
+      "name": "Ahmet Arif",
+      "isApproved": true,
+      "username": "ahmetarif",
+      "description": "Hasretinden prangalar eskittim...",
+      "followedCounter": 65,
+      "followingCounter": 17890,
+      "image": "https://i.pravatar.cc/150?u=ahmetarif",
+      "followed": false
+    },
+    {
+      "id": "18",
+      "name": "İlhan Berk",
+      "isApproved": false,
+      "username": "ilhanberk",
+      "description": "Galata'dan...",
+      "followedCounter": 21,
+      "followingCounter": 10456,
+      "image": "https://i.pravatar.cc/150?u=ilhanberk",
+      "followed": false
+    },
+    {
+      "id": "19",
+      "name": "Cemal Süreya",
+      "isApproved": true,
+      "username": "cemalsureya",
+      "description": "Hayat kısa, kuşlar uçuyor...",
+      "followedCounter": 84,
+      "followingCounter": 20874,
+      "image": "https://i.pravatar.cc/150?u=cemalsureya",
+      "followed": false
+    },
+    {
+      "id": "20",
+      "name": "Sait Faik Abasıyanık",
+      "isApproved": true,
+      "username": "saitfaik",
+      "followedCounter": 95,
+      "followingCounter": 18765,
+      "image": "https://i.pravatar.cc/150?u=saitfaik",
+      "followed": false
+    },
+    {
+      "id": "21",
+      "name": "Aziz Nesin",
+      "isApproved": false,
+      "username": "aziznesin",
+      "description": "Zübük...",
+      "followedCounter": 37,
+      "followingCounter": 16532,
+      "image": "https://i.pravatar.cc/150?u=aziznesin",
+      "followed": false
+    }
+  ]
 }

@@ -1,20 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Button from "~/components/Button";
 import RigthbarSection from "~/components/RigthbarSection";
-
+import { unfollowModalOpenFunc } from "~/store/modal";
+import { useUnfollowModal } from "~/store/modal/hook";
+import { followUser } from "~/store/userList";
+import { useUserList } from "~/store/userList/hook";
 function WhoFollow() {
-  const { followUsers } = useSelector((state) => state.userList);
+  const dispatch = useDispatch();
+  const userList = useUserList();
+  const unfollowModal = useUnfollowModal();
+  const contentRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isOverflow, setIsOverflow] = useState(false);
-  const contentRef = useRef(null);
 
   useEffect(() => {
     const element = contentRef.current;
     if (element) {
       setIsOverflow(element.scrollHeight > element.offsetHeight);
     }
-  }, [followUsers]);
+  }, [userList]);
+
   return (
     <RigthbarSection
       title="Kimi takip etmeli"
@@ -23,8 +29,8 @@ function WhoFollow() {
       setIsExpanded={setIsExpanded}
       isOverflow={isOverflow}
     >
-      {followUsers?.map((user) => (
-        <div className="py-3 px-4 flex">
+      {userList?.map((user) => (
+        <div className="py-3 px-4 flex" key={user.id}>
           <img
             src={user.image}
             alt={`${user.name} images`}
@@ -32,19 +38,35 @@ function WhoFollow() {
             height={40}
             className="mr-2 rounded-full object-cover"
           />
-          <div className="flex justify-between items-center w-[100%]">
-            <div>
+          <div className="flex justify-between items-center flex-1">
+            <div className="flex flex-col	flex-1">
               <div className="font-bold">{user.name}</div>
               <div className="text-[#71767b]">@{user.username}</div>
             </div>
-            <div>
+            {user.followed === false && (
               <Button
                 text="Takip Et"
                 size="normal"
                 color="white"
                 className="whitespace-nowrap"
+                onClick={() => {
+                  dispatch(followUser({ userId: user.id, isFollow: true }));
+                }}
               />
-            </div>
+            )}
+            {user.followed === true && (
+              <Button
+                text="Takip Ediliyor"
+                size="normal"
+                color="white"
+                className="whitespace-nowrap w-[120px]"
+                onClick={() => {
+                  if (!unfollowModal) {
+                    dispatch(unfollowModalOpenFunc(user));
+                  }
+                }}
+              />
+            )}
           </div>
         </div>
       ))}

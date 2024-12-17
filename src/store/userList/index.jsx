@@ -1,20 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-const initialState = {};
+
+export const getUserList = createAsyncThunk("getUserList", async () => {
+  const response = await axios.get("http://localhost:3000/followUsers");
+  return response.data;
+});
+
+export const followUser = createAsyncThunk(
+  "followUser",
+  async ({ userId, isFollow },{dispatch}) => {
+    console.log(userId, isFollow);
+    await axios.patch(`http://localhost:3000/followUsers/${userId}`, {
+      followed: isFollow,
+    });
+    dispatch(getUserList());
+  }
+);
+
+const initialState = {
+  userList: [],
+};
 
 const userList = createSlice({
   name: "userList",
   initialState,
-  reducers: {
-    getUserList: (state, action) => {
-      axios.get("http://localhost:3000/followUsers").then((items) => {
-        if (items.length > 0) {
-          console.log('items : ',items);
-        }
-      });
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(getUserList.fulfilled, (state, action) => {
+      state.userList = action.payload;
+    });
   },
 });
 
 export default userList.reducer;
-export const { getUserList } = userList.actions;
+// reducerlar içerisindeki fonksiyonlar tanımlanır
+export const {} = userList.actions;
