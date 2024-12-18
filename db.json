@@ -9,7 +9,7 @@
       "followedCounter": 8,
       "followingCounter": 221964,
       "image": "https://i.pravatar.cc/150?u=sezai456789",
-      "followed": false
+      "followed": true
     },
     {
       "id": "2",
@@ -20,7 +20,7 @@
       "followedCounter": 56,
       "followingCounter": 12045,
       "image": "https://i.pravatar.cc/150?u=tanpinar1901",
-      "followed": false
+      "followed": true
     },
     {
       "id": "3",
@@ -42,7 +42,7 @@
       "followedCounter": 25,
       "followingCounter": 45687,
       "image": "https://i.pravatar.cc/150?u=orhanpamuk",
-      "followed": true
+      "followed": false
     },
     {
       "id": "5",

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import Button from "~/components/Button";
 import RigthbarSection from "~/components/RigthbarSection";
-import { unfollowModalOpenFunc } from "~/store/modal";
+import { changeModalName, modalOpenFunc } from "~/store/modal";
 import { useUnfollowModal } from "~/store/modal/hook";
 import { followUser } from "~/store/userList";
 import { useUserList } from "~/store/userList/hook";
@@ -62,7 +62,8 @@ function WhoFollow() {
                 className="whitespace-nowrap w-[120px]"
                 onClick={() => {
                   if (!unfollowModal) {
-                    dispatch(unfollowModalOpenFunc(user));
+                    dispatch(modalOpenFunc(user));
+                    dispatch(changeModalName("followModal"))
                   }
                 }}
               />

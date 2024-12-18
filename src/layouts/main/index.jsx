@@ -2,17 +2,25 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../sidebar";
 import Rightbar from "../rightbar";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getUserList } from "~/store/userList";
-import { FollowModal } from "~/components/Modal";
+import { useModal, useModalName } from "~/store/modal/hook";
+import CustomModal from "~/components/Modal";
 
 function MainLayout() {
   const dispatch = useDispatch();
+  const { modalName, modal } = useSelector((state) => state.modal);
+
+  useEffect(() => {
+    console.log("modal : ", modal, " modalName : ", modalName);
+  }, [modalName, modal]);
+
   useEffect(() => {
     dispatch(getUserList());
   }, []);
   return (
     <div className="w-[1265px] mx-auto flex">
+      {modal && modalName && <CustomModal />}
       <Sidebar />
       {/* router kısmında tanımladığımız child elemanlarını kullanmak için Outlet elementini kullanırız*/}
       <main className="flex flex-1 gap-[30px]">
@@ -21,7 +29,6 @@ function MainLayout() {
         </main>
         <Rightbar />
       </main>
-      <FollowModal/>
     </div>
   );
 }

@@ -1,7 +1,10 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { changeModalName, modalOpenFunc } from "~/store/modal";
 
 function More() {
+  const dispatch= useDispatch();
   return (
     <Popover className="relative">
       <PopoverButton className="block group outline-none">
@@ -38,6 +41,25 @@ function More() {
           </div>
           <span className="sideBarMenuItem">İstatistikler</span>
         </Link>
+        <button
+          className={
+            "p-[12px] inline-flex justify-start group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition bg-black overflow-hidden"
+          }
+          onClick={()=> {
+            dispatch(modalOpenFunc())
+            dispatch(changeModalName("appearanceModal"))
+          }}
+        >
+          <div className="w-[30px] h-[30px] relative">
+            <svg viewBox="0 0 24 24" width="26.25px" height="26.25px">
+              <path
+                fill="white"
+                d="M8.75 21V3h2v18h-2zM18 21V8.5h2V21h-2zM4 21l.004-10h2L6 21H4zm9.248 0v-7h2v7h-2z"
+              ></path>
+            </svg>
+          </div>
+          <span className="sideBarMenuItem">Görünüm</span>
+        </button>
         <Link
           to="/monetization"
           className={
