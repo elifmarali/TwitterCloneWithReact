@@ -8,7 +8,12 @@ function Sidebar() {
     <div className="flex flex-col w-[275px] min-h-screen max-h-screen px-2 overflow-auto sticky top-0">
       <Logo />
       <Menu />
-      <Button text="Gönder" size="large" color="var(--color-primary)"/>
+      <Button
+        text="Gönder"
+        size="large"
+        color="var(--color-primary)"
+        buttonOption="colorfull"
+      />
       <div className="mt-auto">
         <Account />
       </div>

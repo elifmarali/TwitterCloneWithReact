@@ -19,6 +19,7 @@ export const FollowModal = () => {
         görüntülemeye devam edebilirsin.
       </p>
       <Button
+        buttonOption="colorless"
         text="Takibi bırak"
         color="white"
         className="w-full px-8 py-[12px] mb-2 mt-6"
@@ -29,6 +30,7 @@ export const FollowModal = () => {
         }}
       />
       <Button
+        buttonOption="colorless"
         text="İptal"
         className="w-full border px-8 py-[12px] mb-2"
         onClick={() => {

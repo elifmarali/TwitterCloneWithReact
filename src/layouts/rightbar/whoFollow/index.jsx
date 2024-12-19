@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import Button from "~/components/Button";
 import RigthbarSection from "~/components/RigthbarSection";
+import store from "~/store";
 import { changeModalName, modalOpenFunc } from "~/store/modal";
 import { useUnfollowModal } from "~/store/modal/hook";
 import { followUser } from "~/store/userList";
 import { useUserList } from "~/store/userList/hook";
 function WhoFollow() {
+  const backgroundColor = store.getState().appearance.backgroundColors.primary;
   const dispatch = useDispatch();
   const userList = useUserList();
   const unfollowModal = useUnfollowModal();
@@ -41,13 +43,16 @@ function WhoFollow() {
           <div className="flex justify-between items-center flex-1">
             <div className="flex flex-col	flex-1">
               <div className="font-bold">{user.name}</div>
-              <div className="text-[color:var(--background-descText)]">@{user.username}</div>
+              <div className="text-[color:var(--background-descText)]">
+                @{user.username}
+              </div>
             </div>
             {user.followed === false && (
               <Button
+                buttonOption="colorless"
                 text="Takip Et"
                 size="normal"
-                color="white"
+                color={backgroundColor === "#fff" ? "#eff3f4" : "white"}
                 className="whitespace-nowrap"
                 onClick={() => {
                   dispatch(followUser({ userId: user.id, isFollow: true }));
@@ -56,14 +61,15 @@ function WhoFollow() {
             )}
             {user.followed === true && (
               <Button
+                buttonOption="colorless"
                 text="Takip Ediliyor"
                 size="normal"
-                color="white"
+                color={backgroundColor === "#fff" ? "#eff3f4" : "white"}
                 className="whitespace-nowrap w-[120px]"
                 onClick={() => {
                   if (!unfollowModal) {
                     dispatch(modalOpenFunc(user));
-                    dispatch(changeModalName("followModal"))
+                    dispatch(changeModalName("followModal"));
                   }
                 }}
               />

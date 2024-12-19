@@ -10,9 +10,7 @@ function Account() {
   const [focus, setFocus] = useState(false);
 
   return (
-    <Popover
-      className="relative my-3"
-    >
+    <Popover className="relative my-3">
       <PopoverButton
         className="outline-none flex items-center group w-[100%]"
         onClick={() => {
@@ -22,7 +20,7 @@ function Account() {
       >
         <div
           className={
-            "p-[12px] inline-flex justify-between items-center group-hover:bg-[rgba(231,233,234,0.1)] rounded-full transition w-[100%]"
+            "p-[12px] inline-flex justify-between items-center group-hover:bg-[color:var(--background-hover)] rounded-full transition w-[100%]"
           }
         >
           <div className="flex items-center">
@@ -43,21 +41,28 @@ function Account() {
                     viewBox="0 0 24 24"
                     width={18.5}
                     height={18.5}
-                    className="ml-0.5"
+                    className="ml-0.5 text-[color:var(--background-titleText)]"
                   >
                     <path
-                      fill="white"
+                      fill="currentColor"
                       d="M17.5 7H17v-.25c0-2.76-2.24-5-5-5s-5 2.24-5 5V7h-.5C5.12 7 4 8.12 4 9.5v9C4 19.88 5.12 21 6.5 21h11c1.39 0 2.5-1.12 2.5-2.5v-9C20 8.12 18.89 7 17.5 7zM13 14.73V17h-2v-2.27c-.59-.34-1-.99-1-1.73 0-1.1.9-2 2-2 1.11 0 2 .9 2 2 0 .74-.4 1.39-1 1.73zM15 7H9v-.25c0-1.66 1.35-3 3-3 1.66 0 3 1.34 3 3V7z"
                     ></path>
                   </svg>
                 )}
               </div>
-              <div className="text-[color:var(--background-descText)]">@{currentAccount.username}</div>
+              <div className="text-[color:var(--background-descText)]">
+                @{currentAccount.username}
+              </div>
             </div>
           </div>
-          <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
+          <svg
+            viewBox="0 0 24 24"
+            width={18.75}
+            height={18.75}
+            className="text-[color:var(--background-titleText)]"
+          >
             <path
-              fill="white"
+              fill="currentColor"
               d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
             ></path>
           </svg>
@@ -67,12 +72,12 @@ function Account() {
         <PopoverPanel
           static
           anchor={{ to: "bottom" }}
-          className="w-[300px] absolute py-3 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden bg-black"
+          className="w-[300px] absolute py-3 left-0 bg-[color:var(--background-primary)] shadow-box rounded-xl overflow-hidden"
           close={close}
         >
           {accounts.map((account, index) => (
             <button
-              className="flex items-center py-3 px-4 hover:bg-[rgba(231,233,234,0.1)] w-[100%]"
+              className="flex items-center py-3 px-4 hover:bg-[color:var(--background-hover)] w-[100%]"
               key={index}
               disabled={account.id === currentAccount.id}
               onClick={() => {
@@ -94,10 +99,10 @@ function Account() {
                         viewBox="0 0 24 24"
                         width={18.5}
                         height={18.5}
-                        className="ml-0.5"
+                        className="ml-0.5 text-[color:var(--background-titleText)]"
                       >
                         <path
-                          fill="white"
+                          fill="currentColor"
                           d="M17.5 7H17v-.25c0-2.76-2.24-5-5-5s-5 2.24-5 5V7h-.5C5.12 7 4 8.12 4 9.5v9C4 19.88 5.12 21 6.5 21h11c1.39 0 2.5-1.12 2.5-2.5v-9C20 8.12 18.89 7 17.5 7zM13 14.73V17h-2v-2.27c-.59-.34-1-.99-1-1.73 0-1.1.9-2 2-2 1.11 0 2 .9 2 2 0 .74-.4 1.39-1 1.73zM15 7H9v-.25c0-1.66 1.35-3 3-3 1.66 0 3 1.34 3 3V7z"
                         ></path>
                       </svg>
@@ -121,12 +126,12 @@ function Account() {
           ))}
           <span className="bg-[color:var(--background-second)] h-[.1px] flex mx-4" />
           <div className="py-3">
-            <div className="py-3 px-4 font-bold hover:bg-[rgba(231,233,234,0.1)]">
+            <div className="py-3 px-4 font-bold hover:bg-[color:var(--background-hover)]">
               Var olan bir hesap ekle
             </div>
             {currentAccount !== false && (
               <div
-                className="py-3 px-4 font-bold hover:bg-[rgba(231,233,234,0.1)]"
+                className="py-3 px-4 font-bold hover:bg-[color:var(--background-hover)]"
                 onClick={() => dispatch(removeAccount(currentAccount.id))}
               >
                 @{currentAccount.username} hesabından çıkış yap

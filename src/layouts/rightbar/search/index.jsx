@@ -30,7 +30,7 @@ function Search() {
         </div>
         <input
           type="text"
-          className="w-full h-full bg-transparent p-3 outline-none text-white placeholder:text-[color:var(--background-descText)]"
+          className="w-full h-full bg-transparent p-3 outline-none text-[color:var(--background-titleText)] placeholder:text-[color:var(--background-descText)]"
           placeholder="Ara"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

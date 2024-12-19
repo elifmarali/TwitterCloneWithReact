@@ -9,7 +9,12 @@ function Premium() {
         Yeni özellikleri açmak için abone ol ve uygun olman durumunda içerik
         üreticisi gelir payı kazan.
       </p>
-      <Button text="Abone ol" size="normal" color="var(--color-primary)"/>
+      <Button
+        text="Abone ol"
+        size="normal"
+        color="var(--color-primary)"
+        buttonOption="colorfull"
+      />
     </div>
   );
 }

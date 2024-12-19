@@ -1,21 +1,97 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Button from "~/components/Button";
+import store from "~/store";
+import { setBackgroundColor, setColor } from "~/store/appearance";
 import { resetModalInfo } from "~/store/modal";
 function Appearace() {
   const dispatch = useDispatch();
   const backgroundColor = getComputedStyle(document.documentElement)
     .getPropertyValue("--background-primary")
     .trim();
-    
+  const selectBackground = store.getState().appearance.backgroundColors.primary;
+  const colorName = store.getState().appearance.color.name;
+  const selectColor = store.getState().appearance.color.primary;
+
+  const themes = [
+    {
+      name: "Işıklar Kapalı",
+      primary: "#000",
+      second: "#16181c",
+      third: "#273340",
+      titleText: "#fff",
+      descText: "#71767b",
+      hover: "rgba(231,233,234,0.1)",
+    },
+    {
+      name: "Loş",
+      primary: "#15202b",
+      second: "#2f3336",
+      third: "#273340",
+      titleText: "#fff",
+      descText: "#8b98a5",
+      hover: "rgba(247,249,249,0.1)",
+    },
+    {
+      name: "Varsayılan",
+      primary: "#fff",
+      second: "#eff3f4",
+      third: "#536471",
+      titleText: "#000",
+      descText: "#536471",
+      hover: "rgba(15,20,25,0.1)",
+    },
+  ];
+
+  const color = [
+    {
+      name: "blue",
+      primary: "#1d9bf0",
+      second: "#8ecdf8",
+      primary1a: "rgba(142, 205, 248, 0.1)",
+    },
+    {
+      name: "yellow",
+      primary: "#ffd400",
+      second: "#ffea80",
+      primary1a: "rgb(255, 212, 0.1)",
+    },
+    {
+      name: "pink",
+      primary: "#f91880",
+      second: "#fc8cc0",
+      primary1a: "rgba(34, 139, 230, 0.1)",
+    },
+    {
+      name: "purple",
+      primary: "rgb(120, 86, 255)",
+      second: "rgb(188, 171, 255)",
+      primary1a: "rgba(188, 171, 255, 0.97)",
+    },
+    {
+      name: "orange",
+      primary: "rgb(255, 122, 0)",
+      second: "rgb(255, 189, 128)",
+      primary1a: "rgba(255, 122, 0,.1)",
+    },
+    {
+      name: "green",
+      primary: "rgb(0, 186, 124)",
+      second: "rgb(128, 221, 190)",
+      primary1a: "rgba(0, 186, 124,.1)",
+    },
+  ];
+
   return (
-    <div className="flex flex-col justify-center items-center w-[90%] gap-2 ">
-      <div className="leading-5 text-[20px] font-bold mb-3">
-        Görünümünü özelleştir
-      </div>
-      <div className="leading-3 text-[color:var(--background-descText)]">
-        Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
+    <div className="flex flex-col justify-center  w-[90%] gap-2 ">
+      <div className="flex flex-col justify-center items-center  w-full gap-2 ">
+        <div className="leading-5 text-[20px] font-bold mb-3">
+          Görünümünü özelleştir
+        </div>
+        <div className="leading-3 text-[color:var(--background-descText)]">
+          Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
+        </div>
       </div>
       <div
         className="flex justify-between w-full p-3 mb-2 shadow-box mt-4 rounded-md"
@@ -66,14 +142,65 @@ function Appearace() {
           </div>
         </div>
       </div>
-      <Button
-        text="Bitti"
-        size="normal"
-        color="var(--color-primary)"
-        onClick={() => {
-          dispatch(resetModalInfo());
-        }}
-      />
+      <div className="flex flex-col items-center gap-y-4 mb-4">
+        <div className="text-[color:var(--background-descText)] text-[20px] font-bold flex w-[100%]">
+          Renk
+        </div>
+        <div className="flex px-4 w-full justify-between items-center gap-x-2">
+          {color.map((colorItem) => (
+            <button
+              className={`p-3 leading-4 w-[40px] h-[40px] rounded-full  font-bold shadow-box`}
+              style={{
+                backgroundColor: colorItem.primary,
+                color: colorItem.titleText,
+                border:
+                  colorName === colorItem.name
+                    ? `1px solid ${colorItem.primary}`
+                    : "none",
+              }}
+              onClick={() => {
+                dispatch(setColor(colorItem));
+              }}
+            />
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-col items-center gap-y-4 mb-4">
+        <div className="text-[color:var(--background-descText)] text-[20px] font-bold flex w-[100%]">
+          Arka Plan
+        </div>
+        <div className="flex px-4 justify-between items-center gap-x-2">
+          {themes.map((themeItem) => (
+            <button
+              className={`p-3 leading-4 min-h-[40px] rounded-md min-w-[120px] font-bold shadow-box`}
+              style={{
+                backgroundColor: themeItem.primary,
+                border:
+                  selectBackground === themeItem.primary
+                    ? `1px solid ${selectColor}`
+                    : "none",
+                color: themeItem.titleText,
+              }}
+              onClick={() => {
+                dispatch(setBackgroundColor(themeItem));
+              }}
+            >
+              {themeItem.name}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="flex w-full justify-center">
+        <Button
+          buttonOption="colorfull"
+          text="Bitti"
+          size="normal"
+          color="var(--color-primary)"
+          onClick={() => {
+            dispatch(resetModalInfo());
+          }}
+        />
+      </div>
     </div>
   );
 }
