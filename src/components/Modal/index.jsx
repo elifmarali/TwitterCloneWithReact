@@ -35,7 +35,7 @@ function CustomModal() {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      backgroundColor: "black",
+      backgroundColor: "var(--background-primary)",
       padding: "32px",
       maxWidth: "600px",
       borderRadius: "16px",

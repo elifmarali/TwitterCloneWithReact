@@ -10,10 +10,25 @@ import CustomModal from "~/components/Modal";
 function MainLayout() {
   const dispatch = useDispatch();
   const { modalName, modal } = useSelector((state) => state.modal);
+  const appearance = useSelector((state) => state.appearance);
 
   useEffect(() => {
-    console.log("modal : ", modal, " modalName : ", modalName);
-  }, [modalName, modal]);
+    document.documentElement.style.setProperty('--background-primary', appearance.backgroundColors.primary);
+    document.documentElement.style.setProperty('--background-second', appearance.backgroundColors.second);
+    document.documentElement.style.setProperty('--background-third', appearance.backgroundColors.third);
+    document.documentElement.style.setProperty('--background-titleText', appearance.backgroundColors.titleText);
+    document.documentElement.style.setProperty('--background-descText', appearance.backgroundColors.descText);
+    document.documentElement.style.setProperty('--background-hover', appearance.backgroundColors.hover);
+
+    document.documentElement.style.setProperty('--color-primary', appearance.color.primary);
+    document.documentElement.style.setProperty('--color-second', appearance.color.second);
+    document.documentElement.style.setProperty('--color-primary1a', appearance.color.primary1a);
+
+    document.documentElement.style.setProperty('--font-size', appearance.fontSize +"px");
+    
+
+    console.log("appearance : ", appearance);
+  }, [appearance]);
 
   useEffect(() => {
     dispatch(getUserList());

@@ -7,25 +7,27 @@ function TopicItem({ topic }) {
     <div className="p-3 ">
       {topic.topic.type === "tag" && (
         <div className="flex justify-between items-center">
-          <div className="text-[#71767b] text-xs">{topic.topic.value}</div>
-          <Popover className="relative w-[25.75px] h-[25.75px] rounded-full group hover:bg-[#1d9bf01a] flex justify-center">
-            <PopoverButton className="flex justify-between items-center">
+          <div className="text-[color:var(--background-descText)] text-xs">
+            {topic.topic.value}
+          </div>
+          <Popover className="relative w-[25.75px] h-[25.75px] rounded-full group hover:bg-[color:var(--color-primary1a)] flex justify-center" style={{border:"none"}}>
+            <PopoverButton className="flex justify-between items-center" style={{border:"none"}}>
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 width={18.75}
                 height={18.75}
-                className="text-[#71767b] group-hover:text-[#1d9bf0]"
+                className="text-[color:var(--background-titleText)] group-hover:text-[color:var(--color-titleText)]"
               >
                 <path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path>
               </svg>
             </PopoverButton>
             <PopoverPanel
               anchor="bottom"
-              className="flex flex-col w-[384px] max-w-[384px] bg-black shadow-box rounded-md"
+              className="flex flex-col w-[384px] max-w-[384px] bg-[color:var(--background-primary)] shadow-box rounded-md"
               style={{ position: "absolute" }}
             >
-              <div className="flex flex-row items-center py-3 px-4  hover:bg-[rgba(255,255,255,0.03)]">
+              <div className="flex flex-row items-center py-3 px-4  hover:bg-[color:var(--background-hover)]">
                 <div className="pr-3 ">
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -36,7 +38,7 @@ function TopicItem({ topic }) {
                 </div>
                 <div className="w-full">İlişkili içerik alakalı değil</div>
               </div>
-              <div className="flex flex-row items-center py-3 px-4  hover:bg-[rgba(255,255,255,0.03)]">
+              <div className="flex flex-row items-center py-3 px-4  hover:bg-[color:var(--background-hover)]">
                 <div className="pr-3">
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -54,14 +56,14 @@ function TopicItem({ topic }) {
       <div className="flex justify-between items-center">
         <div className="font-bold">{topic.title}</div>
         {topic.topic.type !== "tag" && (
-          <Popover className="relative w-[34.75px] h-[34.75px] rounded-full group hover:bg-[#1d9bf01a] flex justify-center">
+          <Popover className="relative w-[34.75px] h-[34.75px] rounded-full group hover:bg-[color:var(--color-primary1a)] flex justify-center">
             <PopoverButton>
               <svg
                 viewBox="0 0 24 24"
                 fill="currentColor"
                 width={18.75}
                 height={18.75}
-                className="text-[#71767b] group-hover:text-[#1d9bf0]"
+                className="text-[color:var(--background-descText)] group-hover:text-[color:var(--color-primary)]"
               >
                 <path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path>
               </svg>
@@ -71,7 +73,7 @@ function TopicItem({ topic }) {
               className="flex flex-col w-[384px] max-w-[384px] bg-black shadow-box rounded-md "
               style={{ position: "absolute" }}
             >
-              <div className="flex flex-row items-center py-3 px-4  hover:bg-[rgba(255,255,255,0.03)]">
+              <div className="flex flex-row items-center py-3 px-4  hover:bg-[color:var(--background-hover)]">
                 <div className="pr-3 ">
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -82,7 +84,7 @@ function TopicItem({ topic }) {
                 </div>
                 <div className="w-full">İlişkili içerik alakalı değil</div>
               </div>
-              <div className="flex flex-row items-center py-3 px-4  hover:bg-[rgba(255,255,255,0.03)]">
+              <div className="flex flex-row items-center py-3 px-4  hover:bg-[color:var(--background-hover)]">
                 <div className="pr-3">
                   <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
                     <path
@@ -98,10 +100,12 @@ function TopicItem({ topic }) {
         )}
       </div>
       {topic.topic.type === "query" && (
-        <div className="text-[#71767b]">{topic.topic.value}</div>
+        <div className="text-[color:var(--background-descText)]">
+          {topic.topic.value}
+        </div>
       )}
       {topic.postCount && (
-        <div className="text-[#71767b] text-xs">
+        <div className="text-[color:var(--background-descText)] text-xs">
           {numberFormat(topic.postCount)} gönderi
         </div>
       )}

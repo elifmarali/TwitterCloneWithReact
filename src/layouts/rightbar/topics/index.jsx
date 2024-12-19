@@ -20,7 +20,7 @@ function Topics() {
   return (
     <RigthbarSection title="Neler oluyor?" isOverflow={isOverflow} isExpanded={isExpanded} setIsExpanded={setIsExpanded} ref={contentRef}>
       {topics?.map((topicItem, index) => (
-        <div className="hover:bg-[rgba(255,255,255,0.03)]" key={index}>
+        <div className="hover:bg-[color:var(--background-hover)]" key={index}>
           <TopicItem topic={topicItem}  />
         </div>
       ))}

@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react'
 
 const RigthbarSection =forwardRef(({title,children,isOverflow,isExpanded,setIsExpanded},ref) => {
   return (
-    <div className="antialiased border border-[#2f3336] flex flex-col gap-2.5 rounded-lg mb-4">
+    <div className="antialiased border border-[color:var(--background-second)] flex flex-col gap-2.5 rounded-lg mb-4">
     <p className="text-xl font-bold py-3 px-4">{title}</p>
     <div
       ref={ref}
@@ -16,7 +16,7 @@ const RigthbarSection =forwardRef(({title,children,isOverflow,isExpanded,setIsEx
     </div>
     {isOverflow && (
       <div
-        className="text-[#1d9bf0] cursor-pointer px-3 py-3 text-[#1d9bf0] hover:bg-[rgba(255,255,255,0.03)]"
+        className="text-[color:var(--color-primary)] cursor-pointer px-3 py-3 text-[color:var(--color-primary)] hover:bg-[color:var(--background-second)]"
         onClick={() => setIsExpanded(!isExpanded)}
       >
         {isExpanded ? "Daha az göster" : "Daha fazla göster"}

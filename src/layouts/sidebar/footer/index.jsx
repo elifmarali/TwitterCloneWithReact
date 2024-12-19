@@ -5,26 +5,26 @@ function Footer() {
   return (
     <div className="mr-4 mb-[300px]">
       <div className="px-4 flex flex-wrap gap-y-2">
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Hizmet Şartları
         </span>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Gizlilik Politikası
         </span>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Çerez Politikası
         </span>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Imprint
         </span>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Erişilebilirlik
         </span>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           Reklam Bilgisi
         </span>
         <Popover className="relative">
-          <PopoverButton className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal flex items-center gap-x-2">
+          <PopoverButton className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal flex items-center gap-x-2">
             Daha fazla
             <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
               <path
@@ -48,7 +48,7 @@ function Footer() {
             </div>
           </PopoverPanel>
         </Popover>
-        <span className="text-[13px] text-[#71767b] hover:underline leading-3 pr-3 font-normal">
+        <span className="text-[13px] text-[color:var(--background-descText)] hover:underline leading-3 pr-3 font-normal">
           © 2024
         </span>
       </div>

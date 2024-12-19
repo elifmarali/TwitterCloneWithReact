@@ -10,10 +10,10 @@ export const FollowModal = () => {
   const user = useSelector((state) => state.modal.user);
   return (
     <>
-      <div className="text-[#e7e9ea] mb-2 font-bold text-[20px] leading-6">
+      <div className="text-[color:var(--background-titleText)] mb-2 font-bold text-[20px] leading-6">
         @{user?.username} adlı kişinin takibi bırakılsın mı?
       </div>
-      <p className="text-[#71767b] leading-5">
+      <p className="text-[color:var(--background-descText)] leading-5">
         Bu kullanıcının gönderileri artık Sana Özel zaman akışında
         görüntülenmeyecek. Gönderileri korumalı değilse kullanıcının profilini
         görüntülemeye devam edebilirsin.

@@ -41,7 +41,7 @@ function WhoFollow() {
           <div className="flex justify-between items-center flex-1">
             <div className="flex flex-col	flex-1">
               <div className="font-bold">{user.name}</div>
-              <div className="text-[#71767b]">@{user.username}</div>
+              <div className="text-[color:var(--background-descText)]">@{user.username}</div>
             </div>
             {user.followed === false && (
               <Button

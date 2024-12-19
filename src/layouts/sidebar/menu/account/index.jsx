@@ -52,7 +52,7 @@ function Account() {
                   </svg>
                 )}
               </div>
-              <div className="text-[#71767b]">@{currentAccount.username}</div>
+              <div className="text-[color:var(--background-descText)]">@{currentAccount.username}</div>
             </div>
           </div>
           <svg viewBox="0 0 24 24" width={18.75} height={18.75}>
@@ -113,13 +113,13 @@ function Account() {
                     </svg>
                   )}
                 </div>
-                <div className="text-[#7e7e7e] text-left">
+                <div className="text-[color:var(--background-descText)] text-left">
                   @{account.username}
                 </div>
               </div>
             </button>
           ))}
-          <span className="bg-[#71767b] h-[.1px] flex mx-4" />
+          <span className="bg-[color:var(--background-second)] h-[.1px] flex mx-4" />
           <div className="py-3">
             <div className="py-3 px-4 font-bold hover:bg-[rgba(231,233,234,0.1)]">
               Var olan bir hesap ekle

@@ -28,7 +28,7 @@ function Menu() {
               >
                 <div className="w-[30px] h-[30px] relative">
                   {menuItem.notification && (
-                    <span className="absolute bg-[#1d9bf0] rounded-full w-[17px] h-[17px] text-white -top-1 right-0 flex items-center justify-center text-[11px] font-bold">
+                    <span className="absolute bg-[color:var(--color-primary)] rounded-full w-[17px] h-[17px] text-white -top-1 right-0 flex items-center justify-center text-[11px] font-bold">
                       {menuItem.notification}
                     </span>
                   )}

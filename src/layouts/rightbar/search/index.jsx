@@ -16,11 +16,11 @@ function Search() {
   }, [query]);
   return (
     <div className="mb-3 sticky top-0" ref={ref}>
-      <div className="relative w-[348.4px] h-[42.4px] bg-[#202327] rounded-full flex items-center focus-within:border focus-within:border-[#1d9bf0] group pr-2 py-1">
+      <div className="relative w-[348.4px] h-[42.4px] bg-[color:var(--background-second)] rounded-full flex items-center focus-within:border focus-within:border-[color:var(--color-second)] group pr-2 py-1">
         <div className="w-[50px] h-[42px] flex items-center">
           <svg
             viewBox="0 0 24 24"
-            className="w-[18.59px] h-[18.59px] ml-4 absolute text-[#71767b] group-focus-within:text-[#1d9bf0]"
+            className="w-[18.59px] h-[18.59px] ml-4 absolute text-[color:var(--background-descText)] group-focus-within:text-[color:var(--color-primary)]"
           >
             <path
               fill="currentColor"
@@ -30,7 +30,7 @@ function Search() {
         </div>
         <input
           type="text"
-          className="w-full h-full bg-transparent p-3 outline-none text-white placeholder:text-[#71767b]"
+          className="w-full h-full bg-transparent p-3 outline-none text-white placeholder:text-[color:var(--background-descText)]"
           placeholder="Ara"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -38,7 +38,7 @@ function Search() {
         />
         {query.length > 0 && (
           <div
-            className="w-[22px] h-[19px] bg-[#1d9bf0] flex mr-1 justify-center items-center rounded-full"
+            className="w-[22px] h-[19px] bg-[color:var(--background-third)] flex mr-1 justify-center items-center rounded-full"
             onClick={() => {
               setQuery("");
             }}
@@ -53,8 +53,8 @@ function Search() {
         )}
       </div>
       {isOpen && (
-        <div className="bg-black rounded-md shadow-box pt-[20px] p-3 text-center ">
-          <span className="text-[#71767b] ">
+        <div className="bg-[color:var(--background-primary)]  rounded-md shadow-box pt-[20px] p-3 text-center ">
+          <span className="text-[color:var(--background-color-descText)] ">
             Kişileri, listeleri veya anahtar kelimeleri aramayı dene
           </span>
         </div>
