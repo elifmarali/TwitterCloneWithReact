@@ -146,7 +146,7 @@ function Appearace() {
         <div className="text-[color:var(--background-descText)] text-[20px] font-bold flex w-[100%]">
           Renk
         </div>
-        <div className="flex px-4 w-full justify-between items-center gap-x-2">
+        <div className="flex px-4 w-full justify-between items-center gap-x-2 shadow-box p-2 rounded-md">
           {color.map((colorItem) => (
             <button
               className={`p-3 leading-4 w-[40px] h-[40px] rounded-full  font-bold shadow-box`}
@@ -169,10 +169,10 @@ function Appearace() {
         <div className="text-[color:var(--background-descText)] text-[20px] font-bold flex w-[100%]">
           Arka Plan
         </div>
-        <div className="flex px-4 justify-between items-center gap-x-2">
+        <div className="flex px-4 w-full justify-between items-center gap-x-2 shadow-box p-2 rounded-md">
           {themes.map((themeItem) => (
             <button
-              className={`p-3 leading-4 min-h-[40px] rounded-md min-w-[120px] font-bold shadow-box`}
+              className={`p-3 leading-4 min-h-[40px] rounded-md min-w-[110px] font-bold shadow-box`}
               style={{
                 backgroundColor: themeItem.primary,
                 border:
