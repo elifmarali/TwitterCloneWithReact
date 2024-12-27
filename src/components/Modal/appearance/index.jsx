@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import classNames from "classnames";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import Button from "~/components/Button";
 import store from "~/store";
-import { setBackgroundColor, setColor } from "~/store/appearance";
-import { resetModalInfo } from "~/store/modal";
+import { setBackgroundColor, setColor, setFontSize } from "~/store/appearance";
+import { log, resetModalInfo } from "~/store/modal";
 function Appearace() {
   const dispatch = useDispatch();
   const backgroundColor = getComputedStyle(document.documentElement)
@@ -13,6 +14,26 @@ function Appearace() {
   const selectBackground = store.getState().appearance.backgroundColors.primary;
   const colorName = store.getState().appearance.color.name;
   const selectColor = store.getState().appearance.color.primary;
+  const selectFontSize = store.getState().appearance.fontSize;
+  const [fontSizePercent, setFontSizePercent] = useState(0);
+
+  useEffect(() => {
+    setFontSizePercent();
+    switch (selectFontSize) {
+      case 13:
+        setFontSizePercent(10);
+        break;
+      case 18:
+        setFontSizePercent(
+          document.querySelector(".active-font-size").offsetLeft + 26
+        );
+        break;
+      default : 
+      setFontSizePercent(
+        document.querySelector(".active-font-size").offsetLeft + 10
+      );
+    }
+  }, [selectFontSize]);
 
   const themes = [
     {
@@ -83,6 +104,8 @@ function Appearace() {
     },
   ];
 
+  const fontSize = [13, 14, 16, 17, 18];
+
   return (
     <div className="flex flex-col justify-center  w-[90%] gap-2 ">
       <div className="flex flex-col justify-center items-center  w-full gap-2 ">
@@ -140,6 +163,44 @@ function Appearace() {
             </Link>{" "}
             gibi bahsetmeler içerebilir.
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center gap-y-4 mb-4">
+        <div className="text-[color:var(--background-descText)] text-[20px] font-bold flex w-[100%]">
+          Yazı tipi boyutu
+        </div>
+        <div className="flex px-4 w-full justify-between items-center gap-x-2 shadow-box p-2 rounded-md">
+          <div className="text-[13px]">Aa</div>
+          <div className="bg-[color:var(--color-second)] h-[1px] flex-1 mx-5 relative flex justify-between items-center">
+            <div
+              style={{ width: fontSizePercent }}
+              className="h-full absolute top-0 left-0 rounded-full bg-[color:var(--color-primary)]"
+            />
+            {fontSize.map((fontItem) => (
+              <button
+                key={fontItem}
+                onClick={() => dispatch(setFontSize(fontItem))}
+                className={classNames(
+                  "w-8 h-8 flex items-center justify-center relative first:-ml-1.5 last:-mr-1.5 before:hover:bg-[color:var(--color-primary)] before:rounded-full before:inset-0 before:absolute before:opacity-20",
+                  {
+                    "active-font-size": fontItem === selectFontSize,
+                  }
+                )}
+              >
+                <div
+                  className={classNames(
+                    "absolute w-3 h-3 rounded-full bg-[color:var(--color-second)]",
+                    {
+                      "w-4 h-4": fontItem === selectFontSize,
+                      "!bg-[color:var(--color-primary)]":
+                        fontItem <= selectFontSize,
+                    }
+                  )}
+                />
+              </button>
+            ))}
+          </div>
+          <div className="text[20px]">Aa</div>
         </div>
       </div>
       <div className="flex flex-col items-center gap-y-4 mb-4">

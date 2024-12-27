@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    font-size: var(--font-size);
+}
+
 body{
-    @apply bg-[color:var(--background-primary)] text-[color:var(--background-titleText)] text-[15px]
+    @apply bg-[color:var(--background-primary)] text-[color:var(--background-titleText)] text-[0.938rem]
 }
 
 
 .sideBarMenuItem{
     font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     white-space: nowrap;
     line-height: 24px;
     margin-left: 20px;
